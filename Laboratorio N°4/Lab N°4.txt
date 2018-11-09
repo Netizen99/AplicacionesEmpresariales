@@ -1,0 +1,84 @@
+Proceso de creación de tablas en cmd.
+---Imagen 1.1.png, ubicado en el paso 2 de "CREANDO MIGRACION DE MODELOS A LA BASE DE DATOS".
+---Imagen 1.2.png, ubicado en el paso 3 de "CREANDO MIGRACION DE MODELOS A LA BASE DE DATOS".
+---Imagen 1.3.png, ubicado en el paso 4 de "CREANDO MIGRACION DE MODELOS A LA BASE DE DATOS".
+---Imagen 1.4.png, ubicado en el paso 5 de "CREANDO MIGRACION DE MODELOS A LA BASE DE DATOS".
+
+Proceso en codigo de tablas.
+---Imagen 2.1.png, ubicado en el paso 1 de "CREACION Y VISTA DE TABLA USUARIOS".
+---Imagen 2.2.png, ubicado en el paso 2 de "CREACION DE TABLAALBUMES".
+---Imagen 2.3.png, ubicado en el paso 3 de "CREARTABLAFOTOS".
+---Imagen 2.4.png, ubicado en el paso 6 de "EJECUCION PARA PROCEDER CON LA MIGRACION".
+---Imagen 2.5.png, ubicado en el paso 7 de "VERIFICACION EN PHPADMIN".
+
+Proceso de creacion de Seeders.
+---Imagen 3.1.png, ubicado en el paso 2 de "MODIFICACION DEL CODIGO".
+---Imagen 3.2.png, ubicado en el paso 3 de "CREACION DE LAS 3 COPIAS DE DATABASESEEDER".
+---Imagen 3.3.png, ubicado en el paso 4 de "MODIFICACION DE USUARIOSEEDER".
+---Imagen 3.4.png, ubicado en el paso 5 de "MODIFICACION DE ALBUMESSEEDER".
+---Imagen 3.5.png, ubicado en el paso 6 de "MODIFICACION DE FOTOSSEEDER".
+---Imagen 3.6.png, ubicado en el paso 7 y 8 de "EJECUCION DE COMANDOS EN CMD".
+---Pregunta ubicada en el paso 8 de "¿Qué sucedio?".
+
+-----------Vamos a observar que en la tabla se va a crear una nueva tablita llamada migrations.
+
+CREANDO MENSAJES Y PÁGINAS DE EXCEPCIÓN PERSONALIZADAS
+---Imagen 4.a.png, ubicado en el paso 1.a de "MODIFICACION DE ARCHIVOS".
+---Imagen 4.b.png, ubicado en el paso 1.b "MODIFICACION DE LA FUNCION RENDER".
+---Imagen 4.1.a png, ubicado en el paso 1.a de "ERROR".
+---Imagen 4.1.b png, ubicado en el paso 1.b de "DEBUG FALSE".
+---Imagen 4.2.a png, ubicado en el paso 2.a de "AGREGAR A INICIO".
+---Imagen 4.3.a png, ubicado en el paso 3.a de "MODIFICAR BIENVENIDA".
+---Imagen 4.3.b png, ubicado en el paso 3.b de "MODIFICAR INICIO".
+---Imagen 4.3.a.b png, ubicado en el paso 3.b de "CHEQUEO DEL ERROR".
+
+ACCESO Y VALIDACION DE USUARIOS.
+---Imagen 5.1 png, ubicado en el paso 1 de "ACCEDER CON UNA CUENTA ERRONEA".
+---Imagen 5.2 png, ubicado en el paso 2 de "ERROR".
+---Imagen 5.3 png, ubicado en el paso 3 de "AGREGAR A VALIDACION".
+---Imagen 5.4 png, ubicado en el paso 3 de "AGREGAR CODIGO".
+---Imagen 5.5 png, ubicado en el paso 5 de "AGREGAR CODIGO A VALIDATOR".
+---Imagen 5.6 png, ubicado en el paso 7 de "AGREGAR CODIGO A AUTH".
+---Imagen 5.6.resultado png, ubicado en el paso 7 de "RESPUESTA A ".
+---Imagen 5.7 png, ubicado en el paso 8 de "MODIFICAR A BLADE".
+---Imagen 5.8 png, ubicado en el paso 11 de "MENU DE REGISTRAR*PRUEBA".
+---Imagen 5.8.1 png, ubicado en el paso 11 de "RESULTADO DE PRUEBA DE REGISTRAR".
+---Imagen 5.9 png, ubicado en el paso 12 de "VERIFICACION EN MYSQL".
+
+MODIFICANDO EL REQUEST DEL INICIO DE SESION
+---Imagen 6.1 png, ubicado en el paso  de "UBICACION DE POSTINICIO".
+---Imagen 6.2 png, ubicado en el paso  de "INTRODUCIR COMANDOS".
+---Imagen 6.3 png, ubicado en el paso  de "VERIFICACION DE ARCHIVO CREADO".
+---Imagen 6.4 png, ubicado en el paso  de "MODIFICACION DE CODIGO EN INICIARSESIONREQUEST".
+---Imagen 6.5 png, ubicado en el paso  de "INTRODUCIMOS INICIARSESIONREQUEST A LA FUNCION POSTINICIO".
+---Imagen 6.6 png, ubicado en el paso  de "CREACION DEL USE PARA INICIARSESIONREQUEST".
+
+CREANDO LA FUNCIONALIDAD PARA RECUPERAR CONTRASEÑA POR PARTE DEL USUARIO
+---Imagen 7.1 png, ubicado en el paso  de "UBICACIO DEL POSTRECUPERAR Y RESPUESTA A LA PREGUNTA".
+----¿CUAL SERIA EL PROCESO DE CREAR UN REQUEST DE NOMBRE: "RECUPERARCONTRASENAREQUEST".
+
+------------------------------Podemos crearlo mediante un cmd con direccion hacia la carpeta GestorImagenes, como se realizo anteriormente con IniciarSesionRequest.
+
+---Imagen 7.3 png, ubicado en el paso  de "MODIFICACION DE LA FUNCION RULES EN RECUPERARCONTRASENAREQUEST".
+---Imagen 7.4 png, ubicado en el paso  de "MODIFICAION DE FALSE A TRUE".
+---Imagen 7.5 png, ubicado en el paso  de "CREACION DEL USE PARA RECUPERARCONTRASENAREQUEST".
+---Imagen 7.6 png, ubicado en el paso  de "MODIFICACION DE LA FUNCION POSTRECUPERAR".
+
+PROBANDO CODIGO
+---Imagen 8.1 png, ubicado en el paso  de "PREGUNTA 1".
+---Imagen 8.2 png, ubicado en el paso  de "PREGUNTA 2 y pasos finales".
+
+
+OBSEVACIONES
+-Vamos a usar bcrypt(), para encriptar el parámetro entregado en la función para cada usuario creado.
+-Por defecto nos va a mandar en el debug de .env true con le motivo de poder identificar facilmente los errores.
+-Por defecto al crear funciones que nos retornen valores, estas van a estar en false ya que su limitacion son los permisos.
+-No debemos olvidar que siempre debemos poner un use si vamos a utilizar una clase diferente en la que as colocado el use.
+-La limitacion de valores, ya sea minima o maxima en un espacio se va a referenciar como en este laboratorio en Request, en su funcion de reglas con el siguiente codigo |min:3| o |max:6|.
+
+CONCLUSIONES
+-La funcion bcrypt(), nos va a encriptar el parámetro entregado. 
+-Si cambiamos en .env en el debug true por false se va a hacer dificilmente para encontrar los errores.
+-Las operaciones de peticion, en este caso siempre nos van a retornar en TRUE como en la función authorize.
+-Siempre cuando creemos un Request, estos se van a estar en la funcion authorize en false.
+-Debemos tener en cuenta al momento de crear el Seeder, los valores correctos ya que se va a alterar los dats enviados en la BD.
