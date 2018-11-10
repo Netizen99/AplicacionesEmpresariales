@@ -1,0 +1,54 @@
+CREANDO LA FUNCIONALIDAD: ACTUALIZAR PERFIL DE USUARIO
+
+---Imagen 1.1. y 1.2.png, ubicado en el paso 1 y 2 de "CREAR UNA CARPETA USUARIO DENTRO DE VISTAS Y EL ARCHIVO ACTUALIZAR.BLADE.PHP DENTRO DE ESTE".
+---Imagen 1.4.png, ubicado en el paso 4 de "MODIFICACION DEL CONTROLADOR DEL USUARIO".
+---Imagen 1.5.png, ubicado en el paso 5 de "ADICION DE LA ACCION EDITAR AL USUARIO".
+---Imagen 1.6.png, ubicado en el paso 6 de "ADICION DE LA VISTA ACTUALIZAR.BLAZDE.PHP".
+---Imagen 1.6.1.png, ubicado en el paso 6 de "MODIFICACION DE LA VISTA ACTUALIZAR.BLAZDE.PHP".
+---Imagen 1.7.png, ubicado en el paso 7 de "VERIFICACION DEL RESULTADO".
+---Imagen 1.8.png, ubicado en el paso 8 de "CREACION DE REQUEST EDITARPERFILREQUEST".
+---Imagen 1.9.png, ubicado en el paso 9 de "MODIFICACION EN EDITARPERFILREQUEST.PHP".
+---Imagen 1.10.png, ubicado en el paso 10 de "IMPORTAMOS EL REQUEST CREADO".
+---Imagen 1.11.png, ubicado en el paso 11 de "REFERENCIAMOS A LA CLASE AUTH".
+---Imagen 1.12.png, ubicado en el paso 12 de "MODIFICACION DEL POSTEDITARPERFIL".	
+---Imagen 1.13.png, ubicado en el paso 13 de "MODIFICACION EN LA VISTA INICIO".
+---Imagen 1.14.png, ubicado en el paso 14 de "COMPROBAR RESULTADOS".
+
+CREANDO LA FUNCIONALIDAD DE MOSTRAR ALBUMES
+
+---Imagen 2.1.png, ubicado en el paso 1,2,3 de "AGREGACION DE IMPORTACION Y CODIGO EN ALBUMCONTROLLER".
+---Imagen 2.2.png, ubicado en el paso 4 de "AGREGAMOS LINKS EN LOS ALBUMES".
+---Imagen 2.3.png, ubicado en el paso 5 de "CONTENIDO DE MOSTRAR.BLADE.PHP".
+---Imagen 2.4.png, ubicado en el paso 6 de "ALBUMES DE UN USUARIO".
+
+CREANDO LA FUNCIONALIDAD PARA MOSTRAR FOTOS
+
+---Imagen 3.1.png, ubicado en el paso 1 de "CREACION DE REQUEST MOSTRARFOTOSREQUEST".
+---Imagen 3.2.png, ubicado en el paso 2 y 3 de "CONTROLADOR DE FOTOS".
+---Imagen 3.3.png, ubicado en el paso 4 de "MODIFICACION DEL CODIGO REQUEST".
+---Imagen 3.4.png, ubicado en el paso 5 de "MODIFICACION DE FUNCION GETINDEX EN EL CONTROLADOR DE FOTOS".
+---Imagen 3.5.png, ubicado en el paso 6 de "CREAR VISTA FOTOS Y CONTENIDO".
+---Imagen 3.6.png, ubicado en el paso 7 de "CONTENIDO DE MOSTRAR.BLADE.PHP".
+---Imagen 3.7.png, ubicado en el paso 8 de "VERIFICACION DE CONTENIDO DE ALBUM".
+---Imagen 3.8.png, ubicado en el paso 2 y 3 de "CONTROLADOR DE FOTOS".
+
+QUEBRAR SEGURIDAD
+---Imagen 4.1.png, ubicado en el paso 1 y 2 de "ENTRAR EN LA INSPECCION DEL ELEMENTO".
+---Imagen 4.2.png, ubicado en el paso 3 de "CAMBIAR VALOR A 10".
+---Imagen 4.3.png, ubicado en el paso 4 de "RESULTADO AL CAMBIO DEL ELEMENTO".
+
+
+OBSERVACIONES
+-Las nuevas vistas creadas van a tener casi las mismas estructuras, ya que estas van a recibir los mismo valores necesarios para ser validadas como tenemos a actualizar.
+-Las normas o reglas que posee la editacion son dependientes de las opciones que tome el usuario, ya que si desea podemos cambiar el nombre de este o no, en cualquiera de los casos no habra problemas.
+-Los request que se agregan son los encargados de verificar si hay una pregunta, y para esta debe haber una respuesta; la cual se va a ver representada en diferentes opciones ya sea en un editado o en una resolucion de una actividad.
+-Los pasos son muy parecidos entre albumes y fotos, ya que estos van a tener las mismas interfacez y funcionalidades, solo que en fotos se va a ser llamado por un album y no va a mostrarnos otro boton.
+-AL momento de ver las imagenes que poseen cada uno de los albumes, no vamos a poder visualizarlas ya que no hay imagenes en estas, en cambio nos va a mandar el recuadro indicando que deberia haber una imagen en ese espacio.
+
+CONCLUSIONES
+-Vamos a crear nuevamente a traer de un CMD un request que nos va a ayudar para la parte y la clase EditarPerfil.
+-Los controladores nos van a indicar en albumes y fotos los valores que van a permitir asi como importamos el Auth.
+-El editado va a depender mucho de la password como de la pregunta, pero va a hacer flexible con el usuario ya que si deseamos lo cambiamos o no.
+-En la vista principal se va a agregar el link para que los albumes sean vistos, de cada usuario.
+-Al cambiar el ID que se le va a enviar a cada boton para ver las fotos, estos nos van a mandar hacia otra interfaz la cual nos mostrar solo un mensaje: "forbidden".
+
