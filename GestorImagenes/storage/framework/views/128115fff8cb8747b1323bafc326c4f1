@@ -1,0 +1,37 @@
+<?php $__env->startSection('content'); ?>
+<div class="container-fluid">
+  <form class="form-horizontal" role="form" method="POST" action="/validado/fotos/crear-foto?id=<?php echo e($id); ?>" enctype="multipart/form-data">
+    <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>" required>
+    <div class="form-group required required">
+        <label class="col-md-4 control-label">Nombre</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="nombre" value="<?php echo e(old('nombre')); ?>" required>
+        </div>
+    </div>
+
+    <div class="form-group required">
+        <label class="col-md-4 control-label">Descripción</label>
+        <div class="col-md-6">
+            <textarea type="text" class="form-control" name="descripcion" rows="3" required><?php echo e(old('descripcion')); ?></textarea>
+        </div>
+    </div>
+
+    <div class="form-group required">
+        <label class="col-md-4 control-label">Imagen max: 20Mb</label>
+        <div class="col-md-6">
+            <input type="file" class="form-control" name="imagen" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-6 col-md-offset-4">
+            <button type="submit" class="btn btn-primary">
+                Subir y crear foto
+            </button>
+        </div>
+    </div>
+  </form>
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

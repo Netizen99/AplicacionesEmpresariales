@@ -1,0 +1,33 @@
+<?php $__env->startSection('content'); ?>
+<?php if(Session::has('editada')): ?>
+  <div class="alert alert-success">
+      <p>La foto fue editada</p>
+  </div>
+<?php endif; ?>
+
+<div class="container-fluid">
+  <p><a href="/validado/fotos/crear-foto?id=<?php echo e($id); ?>" class="btn btn-primary" role=button>Crear Foto</a></p>
+  <?php if(sizeof($fotos)>0): ?>
+    <?php foreach($fotos as $foto): ?>
+    <div class="row">
+        <div class="col-sm-6 col-md-12">
+            <div class="thumbnail">
+              <img src="<?php echo e($foto->ruta); ?>">
+                <div class="caption">
+                    <h3><?php echo e($foto->nombre); ?></h3>
+                    <p><?php echo e($foto->descripcion); ?></p>
+                </div>
+                <p> <a href="/validado/fotos/actualizar-foto/<?php echo e($foto->id); ?>" class="btn btn-primary" roles=button>Editar Foto</a> </p>
+            </div>
+        </div>
+    </div>
+    <?php endforeach; ?>
+  <?php else: ?>
+  <div class="alert alert-danger">
+      <p>Al parecer no tienes fotos. Crea uno!</p>
+  </div>
+  <?php endif; ?>
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
