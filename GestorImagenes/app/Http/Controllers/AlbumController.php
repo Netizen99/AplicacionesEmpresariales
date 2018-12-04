@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use GestorImagenes\Http\Requests\CrearAlbumRequest;
 use GestorImagenes\Http\Requests\ActualizarAlbumRequest;
+use GestorImagenes\Http\Requests\EliminarAlbumRequest;
 use GestorImagenes\Album;
 
 class AlbumController extends Controller {
@@ -61,14 +62,19 @@ class AlbumController extends Controller {
 		return redirect('/validado/albumes')->with('actualizado','El album se actualizo');
 	}
 
-  public function getEliminarAlbum()
-	{
-		return ('formulario de eliminar Albumes');
-	}
-
-  public function postEliminarAlbum()
+  public function postEliminarAlbum(EliminarAlbumRequest $request)
   {
-    return ('eliminando Album');
+  	$album=Album::find($request->get('id'));
+  	$fotos=$album->$fotos;
+  	foreach ($fotos as $foto) {
+  		$rutaanterior=getcwd().$foto->$ruta;
+  		if(file_exists($rutaanterior)){
+  			unlink(realpath($rutaanterior));
+  		}
+  		$foto->delete();
+  	}
+  	$album->delete();
+    return redirect('/validado/albumes')->with('eliminado','El album fue eliminado!');
   }
 
 	public function missingMethod($parameters=array())

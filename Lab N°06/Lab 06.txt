@@ -1,0 +1,34 @@
+INSERTANDO ALBUMES EN LA BASE DE DATOS	
+
+---Imagen 1.1.png, ubicado en el paso 1 de "MODIFICACION DEL CONTROLADOR ALBUM".
+---Imagen 1.2.png, ubicado en el paso 2 de "CREACION DE LA VISTA CREAR-ALBUM.BLADE.PHP".
+---Imagen 1.3.png, ubicado en el paso 3, 4 Y 5 de "RESULTADO DE COMO DEBERIA QUEDAR LA CREACION DEL REQUEST CREARALBUMREQUEST".
+---Imagen 1.4.png, ubicado en el paso 7 de "MODIFICACION DE EL ACTION POSTCREARALBUM EN EL CONTROLADOR ALBUM".
+---Imagen 1.5.png, ubicado en el paso 8 de "MEJORAR LA VISTA LUEGO DE LA CREACION DE UN ALBUM".
+---Imagen 1.6.png, ubicado en el paso 9 de "PRUEBA DEL PROYECTO".
+---Imagen 1.7.png, ubicado en el paso 9 de "PRUEBA DEL PROYECTO".
+
+INSERTANDO FOTOS EN LA BASE DE DATOS
+---Imagen 2.1.png, ubicado en el paso 1 y 2 de "MODIFICACION DE GETINDEX EN EL CONTROLADOR DE FOTO".
+---Imagen 2.2.png, ubicado en el paso 3 de "MODIFICACION DE LA VISTA MOSTRAR.BLADE.PHP DE FOTO".
+---Imagen 2.3.png, ubicado en el paso 4 Y 5 de "CREACION DEL REQUEST CREARFOTOREQUEST".
+---Imagen 2.4.png, ubicado en el paso 6 Y 7 de "CREACION DE LA VISTA CREAR-FOTO.BLADE.PHP".
+---Imagen 2.5.png, ubicado en el paso 8 de "MODIFICACION DE LA FUNCION GETCREARFOTO EN EL CONTROLADOR DE FOTOS".
+---Imagen 2.6.png, ubicado en el paso 9 de "MODIFICACION DEL CONTROLADOR DE FOTOS ".
+---Imagen 2.7.png, ubicado en el paso 10 de "PRUEBA DEL RESULTADO".
+---Imagen 2.8.png, ubicado en el paso 10 de "PRUEBA DEL RESULTADO".
+---Imagen 2.9.png, ubicado en el paso 10 de "PRUEBA DEL RESULTADO".
+
+OBSERVACIONES
+-Vamos a empezar con la obtención de la creación de un album, el cual va a ser llamado en la funcion getCrearAlbum con el return view('albumes.crear-album')
+-En la vista de creación de un album, vamos a editar para que se note que es especial para la creación de un album, asi como para la validación de este y sus componentes como el input de nombre y descripción asi como tambien el del botón crear.
+-El controlador de album, en su funcion postCrearAlbum, se va a encargar de obtener el nombre, descripcion y el id del usuario y con esto vamos a ver que nos va a dar una respuesta de la validacion valida de este y su mensaje correspondiente.
+-La inserción de fotos hacia la base de datos se va a validar por el id que contenga, asi es como la vamos a ubicar.
+-Las fotos van a ser ingresada y enviada a un album requiere que permanezca a el usuario el cual se le a insertado esta, para esto vamos a usar al función authorize; esta la hemos visto en MostrarFotoRequest. 
+
+CONCLUSIONES
+-Los albunes van a almacenar fotos en este laboratorio, cada uno va a tener un limite por imagen.
+-El peso de la imagen lo vamos a colocar en la funcion rules en el Request de CrearFoto, en la ubicación del return de la imagen, esta va a indicar la cantidad con la regla max:( aca vamos a colocar la cantidad de MB que puede almacenar), en este caso vamos a utilizar 20MB, lo cual es algo alto para las imagenes requeridas.
+-El mensaje que nos va a mostrar gracias a validacion exitosa de un album va a ser representado ya sea bien como un mensaje sin estilos o tambien nos puede mostrar el mensaje y que este posea un estilo como vemos en la muestra con un fondo verde.
+-Las fotos que subamos se van a almacenar primero en el getIndex, ya que este va a poner a la foto en el album que se le indique y nos mostrará a este por su id.
+-En postCrearFoto vamos a ver que primero vamos a tener la funcion carbon::now, la cual nos va a dar el momento actual de la operación asi como luego tenemos a imagen->guessExtension, el cual va a dar tener la extensión del archivo origen. Luego vamos a tener el nombre con el que se copiará el archivo al servidor pero esto va a pasar gracias a la función getcwd la cual va a obtener el directorio de origen del archivo.1

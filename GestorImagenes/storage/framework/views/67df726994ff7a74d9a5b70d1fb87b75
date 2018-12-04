@@ -18,7 +18,7 @@
 
 					<form class="form-horizontal" role="form" method="POST" action="/validado/albumes/actualizar-album">
 						<input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
-            <input type="hidden" name="id" value="<?php echo e($album->id); ?>">
+           				<input type="hidden" name="id" value="<?php echo e($album->id); ?>">
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Nombre</label>

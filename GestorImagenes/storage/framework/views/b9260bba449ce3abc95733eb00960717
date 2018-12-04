@@ -1,8 +1,8 @@
 <?php $__env->startSection('content'); ?>
 <div class="container-fluid">
 		<form class="form-horizontal" role="form" method="POST" action="/validado/fotos/actualizar-foto" enctype="multipart/form-data">
-				<input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
-        <input type="hidden" name="id" value="<?php echo e($foto->id); ?>">
+		<input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>" required>
+        <input type="hidden" name="id" value="<?php echo e($foto->id); ?>" required>
 
 				<div class="form-group required required">
 						<label class="col-md-4 control-label">Nombre</label>
@@ -21,7 +21,7 @@
 						<div class="form-group required">
 				        <label class="col-md-4 control-label">Imagen max: 20Mb</label>
 				        <div class="col-md-6">
-				            <input type="file" class="form-control" name="imagen" required>
+				            <input type="file" class="form-control" name="imagen">
 				        </div>
 				    </div>
 

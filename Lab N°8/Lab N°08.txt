@@ -1,0 +1,45 @@
+CREANDO LA FUNCIONALIDAD PARA ELIMINAR ALBUMESY FOTOS
+
+---Imagen -------, ubicado en el paso 0.1 de "PREGUNTA: ¿SERA NECESARIO USAR UN METODO GETELIMINARALBUM?
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+RPTA: SI ES NECESARIO YA QUE OCUPA CODIGO INNECESARIO YA QUE NO LO VAMOS A USAR"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+---Imagen 1.1.png, ubicado en el paso 1,2, 3 y 4 de "CREACION DEL METODO GETELIMINARALBUM Y MEDOFICACION DE ESTE".
+---Imagen 1.2.png, ubicado en el paso 5 de "MODIFICACION DE POSTELIMINARALBUM".
+---Imagen 1.3.png, ubicado en el paso 6 de "MODIFICACION SOBRE LA VISTA MOSTRAR ALBUMES".
+---Imagen 1.4.png, ubicado en el paso 7 de "VERIFICACION DEL PROGRAMA Y LOS CAMBIOS REALIZADOS EN ALBUM".
+---Imagen 1.4.1.png, ubicado en el paso 7 de "VERIFICACION DEL PROGRAMA Y LOS CAMBIOS REALIZADOS EN ALBUM".
+
+ELIMINACION DE FOTOS
+---Imagen 2.1.png, ubicado en el paso 1, 2, 3 y 4 de "MODIFICACION DEL REQUEST CREADO LLAMADO ELIMINARFOTOREQUEST".
+---Imagen ------, ubicado en el paso 4.1 "PREGUNTA: ¿QUE HACEN LAS DOS FUNCIONES IMPORTANTES EN ESTE REQUEST?
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+RPTA: LA PRIMERA SE VA A ENCARGAR DE AUTORIZAR AL USUARIO PARA QUE PUEDA PROCEDER A ELIMINAR LA FOTO UBICANDOLA CON SU ID. LA SEGUNDA SE VA A ENCARGAR DE DAR LAS REGLAS PARA QUE SE PUEDA PROCEDER A ELIMINARLA, EN ESTE CASO SERA QUE EXISTA LA FOTO".
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+---Imagen 2.2.png, ubicado en el paso 5 de "MODIFICACION DE POSTELIMINARFOTO".
+---Imagen ------, ubicado en el paso 5.1 de "PREGUNTA: EXPLICACION
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+RPTA: PRIMERO VA A ENCONTRAR LA FOTO CON SU ID, LUEGO VA A COLOCARLA EN LA VARIABLE RUTAANTERIOR PARA QUE DESPUES ENTRE EN EL IF, CUALES CONDICIONES SON QUE SEA QE SI EXISTE EL ARCHIVO DE RUTAANTERIOR Y QUE ESTA CON EL ID DE UNA FOTO LA VA A ELIMINAR".
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+---Imagen 2.3.png, ubicado en el paso 6 de "MODIFICACION DE VISTA MOSTRAR FOTO".
+---Imagen 2.4.png, ubicado en el paso 7 de "PRUEBA DE LA ELIMINACION DE FOTOS".
+
+OBSERVACIONES:
+-Primeramente nos vamos a dar cuenta que vamos a trabajar con a parte del CRUD, y esta es la eliminicación tanto en fotos como en albumes.
+-Los getEliminar tanto de album como de fotos van a ser eliminados ya que el codigo es innecesario y no hace nada, vamos a cambiarlo para que pueda eliminar a travez de clases Request.		
+-Cuando creemos los request de album y fotos, vamos a darnos cuenta que en las funciones de autorizar van a ser parecidas, solo que en album no va a tener que encontrar a la foto.
+-A cada accion tiene reaccion, vamos a tener en cuenta esta frase cuando vayamos a eliminar una foto, por consiguiente vamos a tener que recibir un mensaje el cual nos va a indicar que a sido eliminada; en este caso a travez de un if.
+-En postEliminarAlbum no vamos a tener un if que nos apoye para el recibimiento de la respuesta luego de eliminarlo, sino vamos a tener un mensaje pero luego de que el album encuentre al id del album que quiera eliminar y este se elimine con la funcion delete.
+
+CONCLUSIONES:
+-Vamos a hacer una de las ultimas funciones necesarias para que podamos cambiar de imagen y esta va a ser eliminarla asi como a los albumes.
+-Con el boton de eliminacion de album vamos a darnos cuenta que va a llamar a las acciones anteriores de eliminacion, asi como va a mandarnos un mensaje de que nos indicara que el album fue actualizado.
+-Con el boton de eliminacion de fotos vamos a ver que se comunicara con las acciones anteriores y que nos dara un mensaje de success que nos indicara que la foto fue eliminada.
+-La funcion de autorizacion en los request nos va a indicar lo que va a cambiar el usuario, como tenemos las id de albumes y fotos.
+-La funcion de rules, en los request nos va a indicar las reglas que debera seguir cada id que va a entrar en estos, y esta va a ser que se requiera que exista primero la foto.

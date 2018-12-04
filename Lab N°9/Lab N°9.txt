@@ -1,0 +1,32 @@
+MEJORANDO EL PROYECTO
+
+---Imagen 1.1.png, ubicado en el paso 1 y 2 de "MODIFICACION DE APP.BLADE.PHP".
+---Imagen 1.2.png, ubicado en el paso 3 de "AGREGAMOS CODIGO A MOSTRAR.BLADE.PHP DE ALBUMES".
+---Imagen 1.3.png, ubicado en el paso 4 de "MODIFICACION DE MOSTRAR.BLADE.PHP DE FOTOS".
+---Imagen 1.4.png, ubicado en el paso 4.1 de "COMPROBACION DE QUE LOS ALBUMES ESTEN EN ORDEN".
+---Imagen 1.5.png, ubicado en el paso 4.2 de "COMPROBACION DE QUE LAS FOTOS ESTEN EN ORDEN".
+---Imagen 1.6.png, ubicado en el paso 5 de "MODIFICACION DE POSTELIMINARALBUM EN CONTROLADORALBUM".
+---Imagen -------, ubicado en el paso 5.1 de "PREGUNTA: ANOTE LOS DETALLES MAS RESALTANTES
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+RPTA: UNO DE LOS DETALLES MAS RESALTANTES SERIA EN QUE VAMOS A REUTILIZAR UNA FUNCION ANTERIOR YA MENCIONADA QUE ES A VALIDACION DE EXISTENCIA DE LA FOTO".
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+COMANDO PARA RE-ALIMENTAR LA BASE DE DATOS
+
+---Imagen 2.1.png, ubicado en el paso 1 de "PRUEBA EN CMD".
+---Imagen 2.2.png, ubicado en el paso 2 de "PRUEBA EN CMD".
+
+OBSERVACIONES
+-Con el cambio en albumes mostrar, vamos a ver que estamos creando un bucle con el cual vamos a tener el ordenamiento de los albumes.
+-Con el cambio en fotos mostrar, vamos a ver que estamos creando un bucle con el cual vamos a tener el ordenamiento de las fotos.
+-El ordenamiento de este no debe alterar ningun funcionamiento de ningun tipo, ya que solo vamos a tocar lo que es de su ordenamiento visual.
+-Para posteliminarAlbum, vamos a necesitar tambien una validacion existente de las fotos.
+-Con el ultimo codigo introducido en nuestro cmd, vamos a restaurar nuestra base de datos.
+
+CONCLUSIONES
+-Podemos cambiar el ordenamiento para que sea en un mayor número que nos vaya a mostrar, asi como disminuirlo pero dependera mucho tambien del tamaño de la pantalla.
+-En mostrar de fotos vamos a darnos cuenta que las columnas van a ser en 3 y que en albumes de 4 para notar la diferencia entre ambas.
+-Cuando eliminemos un album desde nuestro localhost, vamos a eliminarlo de la base de datos asi como su registro de fotos que contenga.
+-Vamos a tener el error que nos va a proponer que debemos cambiar el comentario de ingles de "user" a "usuario".
+-Hemos detectado problemas por el nombre de la clase de creartablaAlbumes y Fotos porque estan en una fecha pasada.
